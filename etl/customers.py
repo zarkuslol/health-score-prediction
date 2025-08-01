@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import pandas as pd
 
-path = Path('data/cleaned')
+path = Path('data/raw')
 
 NUM_CUSTOMERS = 1000
 customer_ids = range(1, NUM_CUSTOMERS + 1)

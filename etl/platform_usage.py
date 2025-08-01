@@ -8,7 +8,7 @@ from pathlib import Path
 import pandas as pd
 
 # Define the data path
-DATA_PATH = Path('data/cleaned')
+DATA_PATH = Path('data/raw')
 DATA_PATH.mkdir(parents=True, exist_ok=True)
 
 # Load customers.csv to get the plan for each customer
@@ -17,7 +17,7 @@ try:
     # and has columns 'customer_id' and 'plan'
     customers_df = pd.read_csv(DATA_PATH / 'customers.csv')
 except FileNotFoundError:
-    print("Error: 'customers.csv' not found in 'data/cleaned/'. Please ensure the file exists.")
+    print("Error: 'customers.csv' not found in 'data/raw/'. Please ensure the file exists.")
     exit()
 
 customer_ids = customers_df['customer_id'].unique()

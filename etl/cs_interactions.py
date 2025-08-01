@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 
 # Carrega clientes.csv para garantir a consistência do customer_id
-path = Path('data/cleaned')
+path = Path('data/raw')
 customers_df = pd.read_csv(path / 'customers.csv')
 customer_ids = customers_df['customer_id'].unique()
 
